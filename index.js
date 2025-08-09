@@ -38,7 +38,7 @@ async function run() {
       res.send(result);
     });
 
-    app.get('/addBook', async (req, res) => {
+    app.get('/all-book', async (req, res) => {
       const result = await bookCollection.find().toArray();
       res.send(result);
     });
@@ -66,6 +66,10 @@ async function run() {
 
     app.get('/special-offer', async (req, res)=>{
       const result= await specialOffer.find().limit(8).toArray()
+      res.send(result);
+    })
+    app.get('/all-special-offer', async (req, res)=>{
+      const result= await specialOffer.find().toArray()
       res.send(result);
     })
 
