@@ -58,7 +58,7 @@ async function run() {
       res.send(result);
     });
 
-    // add special offer
+    // add special offer 
     app.post('/add-special-offer', async (req, res)=>{
       const result = await specialOffer.insertOne(req.body);
       res.send(result);
