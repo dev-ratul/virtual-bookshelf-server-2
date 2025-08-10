@@ -170,7 +170,7 @@ async function run() {
       }
     });
 
-    // Stats and top reviewers routes..
+    // Stats and top reviewers routes...
     app.get("/api/stats", async (req, res) => {
       try {
         const bookCount = await bookCollection.countDocuments();
